@@ -1,0 +1,17 @@
+{
+  "name": "ep-troubleshoot",
+  "description": "WordPress plugin to troubleshoot ElasticPress issues.",
+  "type": "wordpress-plugin",
+  "license": "GPLv2 or later",
+  "authors": [
+    {
+      "name": "Allan Collins",
+      "email": "allan.collins@10up.com"
+    }
+  ],
+  "autoload": {
+    "classmap": [
+      "includes"
+    ]
+  }
+}
