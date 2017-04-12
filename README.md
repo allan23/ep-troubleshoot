@@ -16,7 +16,7 @@ This plugin will generate a JSON file outlining details about your WordPress, El
 
 **What do I do with the JSON file?**
 
-If you are encountering an issue with ElasticPress, you can create a [GitHub issue](https://github.com/10up/ElasticPress/issues) for the ElasticPress team to review.
+If you are encountering an issue with ElasticPress, you can create a [GitHub issue](https://github.com/10up/ElasticPress/issues) for the ElasticPress team to review and attach the file to the issue.
 
 **ElasticPress cannot connect to Elasticsearch, can you help?**
 
