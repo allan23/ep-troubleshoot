@@ -54,6 +54,7 @@ class EP_Troubleshoot {
 	private function get_info() {
 		return array(
 			'Versions:'             => $this->version_info(),
+			'Active Features'       => $this->get_active_features(),
 			'Active Plugins'        => $this->get_active_plugins(),
 			'Indexable Post Types'  => ( function_exists( 'ep_get_indexable_post_types' ) ) ? ep_get_indexable_post_types() : 'N/A',
 			'Indexable Post Status' => ( function_exists( 'ep_get_indexable_post_status' ) ) ? ep_get_indexable_post_status() : 'N/A',
@@ -95,6 +96,23 @@ class EP_Troubleshoot {
 		endforeach;
 
 		return $active_list;
+	}
+
+	/**
+	 * Retrieves a list of activated features.
+	 *
+	 * @return array
+	 */
+	private function get_active_features() {
+		$active   = array();
+		$features = get_option( 'ep_feature_settings', array() );
+		foreach ( $features as $key => $feature ):
+			if ( $feature['active'] ) {
+				$active[] = $key;
+			}
+		endforeach;
+
+		return $active;
 	}
 
 	/**
