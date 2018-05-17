@@ -58,6 +58,7 @@ class EP_Troubleshoot {
 			'Active Plugins'        => $this->get_active_plugins(),
 			'Indexable Post Types'  => ( function_exists( 'ep_get_indexable_post_types' ) ) ? ep_get_indexable_post_types() : 'N/A',
 			'Indexable Post Status' => ( function_exists( 'ep_get_indexable_post_status' ) ) ? ep_get_indexable_post_status() : 'N/A',
+			'Searchable Post Types' => ( function_exists( 'ep_get_searchable_post_types' ) ) ? ep_get_searchable_post_types() : 'N/A',
 			'Cluster Status'        => ( class_exists( 'EP_API' ) ) ? EP_API::factory()->get_cluster_status() : 'N/A',
 		);
 	}
